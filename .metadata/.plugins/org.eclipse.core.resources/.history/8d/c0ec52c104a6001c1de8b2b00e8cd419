@@ -1,0 +1,16 @@
+package com.tutorialspoint;
+
+import java.util.HashMap;
+
+public class Map {
+	public static void main(String[] args) {
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		
+		map.put(2, 3);
+		if(map.containsValue(3)) {
+			System.out.println("Có dữ liệu");
+		}else {
+			System.out.println("Không có dữ liệu");
+		}
+	}
+}

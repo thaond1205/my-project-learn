@@ -1,0 +1,29 @@
+package com.tutorialspoint;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class MainApp {
+	@Autowired
+	private static ApplicationContext applicationContext;
+	   public static void main(String[] args) {
+		   applicationContext = SpringApplication.run(Application.class, args);
+		  
+	      ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+//	      HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
+//	      obj.getMessage();
+//	      
+//	      HelloWorld c = (HelloWorld) context.getBean("getHelloWorld");
+//	      System.out.println(c.getHello());
+	      displayAllBeans();
+	   }
+	   public static void displayAllBeans() {
+	        String[] allBeanNames = applicationContext.getBeanDefinitionNames();
+	        for(String beanName : allBeanNames) {
+	            System.out.println(beanName);
+	        }
+	    }
+	}

@@ -1,0 +1,16 @@
+package com.tutorialspoint;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackageClasses = HelloWorld.class)
+public class JavaConfiguration {
+	
+//	@Bean
+//	public HelloWorld getHelloWorld() {
+//		return new HelloWorld("Tran Anh", 20);
+//	}
+
+}

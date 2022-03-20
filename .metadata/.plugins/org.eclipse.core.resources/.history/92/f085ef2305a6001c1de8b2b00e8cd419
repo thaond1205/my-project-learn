@@ -1,0 +1,26 @@
+package com.tutorialspoint;
+
+import java.util.HashMap;
+
+public class Map {
+	public static void main(String[] args) {
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		
+		map.put(2, 3);
+		map.put(2, 4);
+		map.put(2, 2);
+		map.put(2, 1);
+		map.put(2, 5);
+		map.put(2, 2);
+		map.put(2, 4);
+		map.put(2, 7);
+		map.forEach( (k, v) -> {
+			if(v.intValue() == 8) {
+				System.out.println("Có dữ liệu");
+			}else {
+				System.out.println("Không có dữ liệu");
+			}
+		} );
+		
+	}
+}

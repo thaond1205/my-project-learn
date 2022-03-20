@@ -1,0 +1,29 @@
+package com.tutorialspoint;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class HelloWorld {
+	   private String message;
+	   private int age;
+	   
+	   public String getHello() {
+		   return "Thao day";
+	   }
+	   public HelloWorld(String message, int age) {
+		   this.message = message;
+		   this.age = age;
+	   }
+
+	   public void setMessage(String message){
+	      this.message  = message;
+	   }
+	   
+	   public void setAge(int age){
+		      this.age  = age;
+		   }
+	   public void getMessage(){
+	      System.out.println("Your Message : " + message);
+	      System.out.println("Your Age : " + age);
+	   }
+	}
